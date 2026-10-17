@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffb6c9, #ffdfeb, #f8b4d0);
+    color: #8b234c;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 22px;
+    text-align: center;
+    background: #ffffff65;
+    backdrop-filter: blur(10px);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    text-align: center;
+    background: #fffafc;
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px #b8326040;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    font-size: 75px;
+    animation: heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    margin: 20px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 7vw, 48px);
+    color: #d6336c;
+}
+
+h2 {
+    margin: 25px 0 15px;
+    color: #d6336c;
+}
+
+p {
+    max-width: 520px;
+    margin: 15px auto;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+button {
+    margin: 10px 5px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 30px;
+    background: #e8437d;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #c52c63;
+    transform: translateY(-3px);
+}
+
+.secondary {
+    background: #f9d5e3;
+    color: #a52655;
+}
+
+.secondary:hover {
+    background: #f4bfd3;
+}
+
+.page {
+    display: none;
+    animation: appear .6s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+.photo {
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+    border: 5px solid #ffd1e1;
+    border-radius: 50%;
+    background: #ffe8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message {
+    padding: 20px;
+    margin: 20px auto;
+    background: #fff0f6;
+    border-radius: 20px;
+    border: 1px solid #ffd0e0;
+}
+
+#answer {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #ffe5ef;
+    border-radius: 20px;
+    animation: appear .6s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    color: #9d315a;
+}
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    z-index: -1;
+    animation: floatUp 8s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 500px) {
+    main {
+        margin: 20px auto;
+        padding: 25px 15px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>JIA</header>
+
+<main>
+
+    <!-- PAGE 1 -->
+    <section class="page active">
+        <div class="heart">❤️</div>
+
+        <h1>Hi, My Love!</h1>
+
+        <p>
+            I made something special for you.
+            It's a little reminder of how much
+            you mean to me.
+        </p>
+
+        <p>
+            No matter how busy life gets,
+            I hope you always remember that
+            someone is happy to have you in their life. 🥹
+        </p>
+
+        <button onclick="nextPage()">
+            Open Your Surprise 💌
+        </button>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page">
+        <div class="photo">
+          <img src="c:\Users\vincent\Downloads\file_0000000023c0820792acbbff916b9a1f.png" alt="My Photo">
+        </div>
+
+        <h1>❤️</h1>
+
+        <div class="message">
+            <p>
+           Wala lang, gusto ko lang sabihan na I'm really thankful na meron ako ikaw. 
+            Hindi kailangan ng special occasion para sabihin ko kung gaano kita naappreciate. 
+           I'm happy sa mga simpleng moments natin, sa mga kwentuhan, tawanan, and even sa mga random na bagay na ginagawa natin
+           Iloveyou
+            </p>
+        </div>
+
+        <p>
+            I'm grateful for you, more than words can say. 
+        </p>
+
+        <button class="secondary" onclick="prevPage()">← Back</button>
+        <button onclick="nextPage()">Next 💕</button>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page">
+        <div class="heart">💖</div>
+
+        <h1>A Promise to You</h1>
+
+        <p>
+            I can't promise that every day will be perfect,
+            but I can promise to keep learning, listening,
+            and trying to understand you better.
+        </p>
+
+        <p>
+            I want us to communicate honestly,
+            support each other, laugh together,
+            and respect each other's dreams.
+        </p>
+
+        <button class="secondary" onclick="prevPage()">← Back</button>
+        <button onclick="nextPage()">One Last Thing 💌</button>
+    </section>
+
+    <!-- PAGE 4 -->
+    <section class="page">
+        <div class="heart">💘</div>
+
+        <h1>One Question...</h1>
+
+        <p>
+            If I could give you one thing,
+            it would be the ability to see yourself
+            through my eyes, so you could understand
+            how special you are to me.
+        </p>
+
+        <h2>Will you keep making memories with me? 🥹</h2>
+
+        <button onclick="showAnswer()">Of Course! ❤️</button>
+        <button class="secondary" onclick="showMessage()">Tell Me More 💌</button>
+
+        <div id="answer">
+            <h2 id="answerTitle">You Make My Heart Happy</h2>
+            <p id="answerText"></p>
+        </div>
+
+        <br>
+        <button class="secondary" onclick="prevPage()">← Read Again</button>
+    </section>
+
+</main>
+
+<footer>
+    MADE WITH LOVE, JUST FOR YOU ♡
+</footer>
+
+<script>
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
+
+function showPage(index) {
+    pages[currentPage].classList.remove("active");
+    currentPage = index;
+    pages[currentPage].classList.add("active");
+
+    document.getElementById("answer").style.display = "none";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function nextPage() {
+    if (currentPage < pages.length - 1) {
+        showPage(currentPage + 1);
+    }
+}
+
+function prevPage() {
+    if (currentPage > 0) {
+        showPage(currentPage - 1);
+    }
+}
+
+function showAnswer() {
+    document.getElementById("answerTitle").textContent =
+        "You Make My Heart Happy! 💗";
+
+    document.getElementById("answerText").textContent =
+        " I'm happy to keep making memories with you. Thank you for being part of my life. Here's to more laughter, love, and beautiful moments together!";
+
+    document.getElementById("answer").style.display = "block";
+    createHearts();
+}
+
+function showMessage() {
+    document.getElementById("answerTitle").textContent =
+        "There's More to Say 💌";
+
+    document.getElementById("answerText").textContent =
+        "Hinde naman tayo nagmamadali, diba? We can take our time naman para mas makilala pa natin ang isa't isa. Gusto ko yung natural lang, walang pressure, and we can be comfortable with each other. I want to know you more, not just the good things about you, but also the little things that make you who you are. Slowly lang tayo, basta genuine yung intentions natin sa isa't isa. ❤️";
+
+    document.getElementById("answer").style.display = "block";
+}
+
+function createHearts() {
+    for (let i = 0; i < 25; i++) {
+        const heart = document.createElement("div");
+
+        heart.className = "floating";
+        heart.textContent = Math.random() > 0.5 ? "❤️" : "💕";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (15 + Math.random() * 25) + "px";
+        heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 8500);
+    }
+}
+
+// Floating hearts in the background
+setInterval(() => {
+    const heart = document.createElement("div");
+
+    heart.className = "floating";
+    heart.textContent = "♡";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (7 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 12000);
+}, 1200);
+</script>
+
+</body>
+</html>
